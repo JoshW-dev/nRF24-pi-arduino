@@ -8,7 +8,6 @@ void setup() {
   Serial.println("receiver");
 
   radio.begin();
-  radio.setAutoAck(false);
   radio.openReadingPipe(0, address);
   radio.setPALevel(RF24_PA_MIN);
   radio.startListening();

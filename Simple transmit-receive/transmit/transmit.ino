@@ -3,12 +3,11 @@
 #include <RF24.h>
 RF24 radio(9, 10); // CE, CSN
 const byte address[6] = "00001";
-String request;
 void setup() {
   Serial.begin(9600);
   Serial.println("transmitter");
+  
   radio.begin();
-  radio.setAutoAck(false);
   radio.openWritingPipe(address);
   radio.setPALevel(RF24_PA_MIN);
   radio.stopListening();
