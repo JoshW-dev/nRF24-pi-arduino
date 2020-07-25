@@ -1,11 +1,7 @@
 /**
-   Example for efficient call-response using ack-payloads
-
-   This example continues to make use of all the normal functionality of the radios including
-   the auto-ack and auto-retry features, but allows ack-payloads to be written optionally as well.
-   This allows very fast call-response communication, with the responding radio never having to
-   switch out of Primary Receiver mode to send back a payload, but having the option to if wanting
-   to initiate communication instead of respond to a commmunication.
+  Code for sending files between transceivers using ack packets
+  This is built off the RF24 ack pingpair example
+  
 */
 /*
   // March 2014 - TMRh20 - Updated along with High Speed RF24 Library fork
@@ -17,7 +13,7 @@
 #include "RF24.h"
 #include "printf.h"
 
-// Hardware configuration: Set up nRF24L01 radio on SPI bus plus pins 7 & 8
+// Hardware configuration: Set up nRF24L01 radio on SPI bus plus pins 9 & 10
 RF24 radio(9, 10);
 
 // Topology
